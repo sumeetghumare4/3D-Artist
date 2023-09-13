@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/frontend
+      - /frontend/node_modules
+    depends_on:
+      - backend
+    networks:
+      - mynetwork
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    networks:
+      - mynetwork
+    volumes:
+      - ./backend/blender/final_user_output:/final_user_output
+
+    env_file:
+      - ./.env
+    environment:
+      - REPLICATE_API_TOKEN=r8_47hFEIHbfpIcsCt1azqS71orxmQe9T54ZsoKK
+
+
+
+networks:
+  mynetwork:

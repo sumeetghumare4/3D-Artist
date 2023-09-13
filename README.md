@@ -1,23 +1,7 @@
-🏆 Hackathon Winner 🏆
-
-We are proud to announce that this project won the 3D Model AI Hackathon https://lablab.ai/event/3d-ai-models-hackathon hosted by Lablab.ai
-![image](https://github.com/DLOVRIC2/designdive/assets/111785311/4543e10b-0fcd-4d6a-b48f-60cb517cd5ba)
-
-
----
-## DesignDive Application
-
-![image](https://github.com/DLOVRIC2/designdive/assets/66421606/43d1709c-7db5-4098-b8dd-7a206f4fc959)
-
-
-Part of the Lablab.ai 3D AI Hackathon challange
-
-The application demo is available on request through ngrok tunnel.
-
 
 ### Prerequisites
 
-To run DesignDive, you need
+To run 3D-Artist, you need
 
 - Docker (https://www.docker.com/products/docker-desktop)
 - Docker Compose, which is included with Docker Desktop for Mac and Windows, but needs to be installed separately for Linux (https://docs.docker.com/compose/install/)

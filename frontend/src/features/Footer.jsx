@@ -44,13 +44,7 @@ const Footer = () => {
         </div>
         <hr className='my-4' />
         <div className="container">
-          <div className="contact-pricing-row d-flex justify-content-start align-items-center">
-            {/* Replace '#' with the actual links */}
-            <a href="https://www.linkedin.com/in/sumeet-ghumare-9665aa1b2/" className="contact-link me-2" target="_blank" rel="noopener noreferrer">Privacy policy</a>
-            <span className="divider"></span>
-            <a href="https://www.linkedin.com/in/sumeet-ghumare-9665aa1b2/" className="contact-link me-2" target="_blank" rel="noopener noreferrer">Contact</a>
-            <span className="divider"></span>
-            <a href="https://www.linkedin.com/in/sumeet-ghumare-9665aa1b2/" className="pricing-link" target="_blank" rel="noopener noreferrer">Pricing</a>
+          
           </div>
         </div>
       </footer>

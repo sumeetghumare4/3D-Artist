@@ -9,7 +9,7 @@ const Navb = () => {
     <div>
       <Navbar bg="light" variant="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/" className="logo">3D_Artist</Navbar.Brand>
+          <Navbar.Brand href="/" className="logo">Designdive</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <div className="header-btn">

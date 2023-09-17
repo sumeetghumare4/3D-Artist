@@ -27,7 +27,7 @@ services:
     env_file:
       - ./.env
     environment:
-      - REPLICATE_API_TOKEN=r8_47hFEIHbfpIcsCt1azqS71orxmQe9T54ZsoKK
+      - REPLICATE_API_TOKEN={replace with your replicate api key}
 
 
 

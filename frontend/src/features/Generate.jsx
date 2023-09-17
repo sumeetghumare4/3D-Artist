@@ -222,26 +222,7 @@ const Generate = () => {
         </button>
       </div>
 
-      <div className="columns-container">
-        <div className="column">
-          <h4 className="column-heading">Apply custom materials</h4>
-          <div className="column-content">
-            <div className="loading-container">
-              <ReactLoading type={"balls"} color={"#333"} height={'100%'} width={'100%'} />
-            </div>
-            <div className="coming-soon2">Coming soon</div>
-          </div>
-        </div>
-        <div className="column">
-          <h4 className="column-heading">Modify shadows and lighting</h4>
-          <div className="column-content">
-            <div className="loading-container">
-              <ReactLoading type={"cylon"} color={"#333"} height={'100%'} width={'100%'} />
-            </div>
-            <div className="coming-soon2">Coming soon</div>
-          </div>
-        </div>
-      </div>
+      
 
       {isLoading && (
         <div className="loading-section">

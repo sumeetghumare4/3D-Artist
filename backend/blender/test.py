@@ -2,6 +2,10 @@ import bpy
 import sys
 import os
 sys.path.append(os.path.dirname(__file__))
+
+renderFileName = "my_render.png" 
+bpy.context.scene.render.filepath = './final_user_output/' + renderFileName
+
 from objectConfigurator.blenderManipulation import openBlenderTemplateFile, renderCamera, objectProcess
 from objectConfigurator.fileManipulation import getObject, itemCategoryCheck
 import logging

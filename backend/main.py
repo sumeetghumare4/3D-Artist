@@ -1,20 +1,16 @@
+import os
+import logging
 from fastapi import FastAPI, BackgroundTasks
 from fastapi.responses import FileResponse
 from generate_objects import ReplicateObjectGenerator
-import time
-import os
-import logging
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi import Body
-from typing import List
 from subprocess import run
 from pydantic import BaseModel
 import json
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.base import BaseHTTPMiddleware
-from starlette.responses import Response
 from fastapi import HTTPException
-
+from fastapi.middleware.cors import CORSMiddleware
+from typing import List
 current_path = os.path.dirname(__file__)
 blender_path = os.path.join(current_path, "blender")
 user_download_path = os.path.join(blender_path, "final_user_output", "render_test.png")
@@ -25,12 +21,10 @@ final_user_output_path = os.path.join(blender_path, "final_user_output")
 app = FastAPI()
 logger = logging.getLogger("uvicorn")
 
-
 origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://localhost:8000",
-
 ]
 
 app.add_middleware(
@@ -40,7 +34,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 tasks = {}
 
@@ -59,7 +52,6 @@ class CustomCORSMiddleware(BaseHTTPMiddleware):
 app.add_middleware(CustomCORSMiddleware)
 app.mount("/static", StaticFiles(directory=final_user_output_path), name="static")
 
-
 class StartTaskRequest(BaseModel):
     prompts: List[str]
     user_defined_categories: List[str]
@@ -71,7 +63,7 @@ def process_task(prompts, user_defined_categories, room_type, task_id):
     generator.generate_user_files(prompts, user_defined_categories)
     logger.info("Finished creating all the 3D models. Moving onto rendering in blender.")
 
-    ## SAVE INPUTS
+    # SAVE INPUTS
     params = {
         "user_defined_categories": user_defined_categories,
         "room_type": [room_type]

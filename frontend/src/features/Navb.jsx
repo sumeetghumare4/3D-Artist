@@ -2,7 +2,6 @@ import React from "react";
 import './Style/navbar.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
-// import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 const Navb = () => {
@@ -10,22 +9,19 @@ const Navb = () => {
     <div>
       <Navbar bg="light" variant="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/" className="logo">Designdive</Navbar.Brand>
+          <Navbar.Brand href="/" className="logo">3D_Artist</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto"> {/* This class aligns items to the right */}
-              {/* Replace '#' with the actual URL */}
-              <Nav.Link href="/generate">Generate</Nav.Link>
-            </Nav>
-            <div className="header-btn"> {/* This class aligns items to the right */}
+            <div className="header-btn">
+              {/* This class aligns items to the right */}
               {/* Replace '#' with the actual URL */}
               <a
                 className="btn-default btn-small round btn-grad"
-                target="_blank"
-                href="/home/sumeet/designdive/backend/generate_objects.py"
+                href="/generate"
               >
-                Sign In
+                Generate
               </a>
+              {/*               <button type="submit" value="Generate" onClick={handleSubmit}></button> */}
             </div>
           </Navbar.Collapse>
         </Container>

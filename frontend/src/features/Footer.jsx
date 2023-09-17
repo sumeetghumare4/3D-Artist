@@ -45,7 +45,6 @@ const Footer = () => {
         <hr className='my-4' />
         <div className="container">
           
-          </div>
         </div>
       </footer>
     </div>

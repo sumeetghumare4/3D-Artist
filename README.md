@@ -16,18 +16,19 @@ Follow these steps to get DesignDive up and running
    ```
    git clone https://github.com/DLOVRIC2/designdive
    ```
-
-2. **Navigate to the repository directory**
+   -copy past this link in your terminal
+   
+3. **Navigate to the repository directory**
    ```
    cd designdive
    ```
 
-3. **Export your key to local session**
+4. **Export your key to local session**
    ```
    export REPLICATE_API_TOKEN=you_api_key
    ```
 
-4. **Start the Docker containers**
+5. **Start the Docker containers**
    ```
    docker-compose up --build
    ```
